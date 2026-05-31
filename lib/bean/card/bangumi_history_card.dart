@@ -161,7 +161,7 @@ class _BangumiHistoryCardVState extends State<BangumiHistoryCardV> {
                             ),
                             const SizedBox(width: 4),
                             Flexible(
-                              child: Text(
+                              child: TranslatedText(
                                 episodeText,
                                 style: theme.textTheme.bodySmall?.copyWith(
                                   color: colorScheme.onSurfaceVariant,

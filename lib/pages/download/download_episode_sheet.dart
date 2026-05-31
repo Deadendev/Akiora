@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/modules/download/download_module.dart';
 import 'package:kazumi/modules/roads/road_module.dart';
 import 'package:kazumi/pages/download/download_controller.dart';
@@ -152,7 +153,7 @@ class _DownloadEpisodeSheetState extends State<DownloadEpisodeSheet> {
                             child: Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 8),
-                              child: Text(
+                              child: TranslatedText(
                                 identifier,
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,

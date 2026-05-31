@@ -5,6 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
 import 'package:kazumi/bean/card/episode_comments_card.dart';
 import 'package:kazumi/bean/widget/error_widget.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/modules/bangumi/episode_item.dart';
 import 'package:kazumi/pages/video/video_controller.dart';
 import 'package:kazumi/request/apis/bangumi_api.dart';
@@ -159,13 +160,13 @@ class _EpisodeCommentsSheetState extends State<EpisodeCommentsSheet> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                TranslatedText(
                     '${videoPageController.episodeInfo.readType()}.${videoPageController.episodeInfo.episode} ${videoPageController.episodeInfo.name}',
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         fontSize: 12,
                         color: Theme.of(context).colorScheme.outline)),
-                Text(
+                TranslatedText(
                     (videoPageController.episodeInfo.nameCn != '')
                         ? '${videoPageController.episodeInfo.readType()}.${videoPageController.episodeInfo.episode} ${videoPageController.episodeInfo.nameCn}'
                         : '${videoPageController.episodeInfo.readType()}.${videoPageController.episodeInfo.episode} ${videoPageController.episodeInfo.name}',
@@ -256,7 +257,7 @@ class _EpisodeCommentsSheetState extends State<EpisodeCommentsSheet> {
                       final bool selected = index + 1 == selectedEpisode;
                       return ListTile(
                         selected: selected,
-                        title: Text(
+                        title: TranslatedText(
                           episodeTitle.isEmpty
                               ? episodeText
                               : '$episodeText $episodeTitle',

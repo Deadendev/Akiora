@@ -7,6 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:kazumi/bean/appbar/sys_app_bar.dart';
 import 'package:kazumi/bean/card/network_img_layer.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/modules/search/image_search_module.dart';
 import 'package:kazumi/pages/search/search_controller.dart';
 import 'package:kazumi/utils/constants.dart';
@@ -638,7 +639,7 @@ class _ImageSearchPageState extends State<ImageSearchPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          TranslatedText(
             _formatTraceResultTitle(result),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,

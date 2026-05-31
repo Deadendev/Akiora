@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kazumi/bean/appbar/sys_app_bar.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/modules/download/download_module.dart';
 import 'package:kazumi/modules/bangumi/bangumi_item.dart';
 import 'package:kazumi/pages/download/download_controller.dart';
@@ -101,7 +102,7 @@ class _DownloadPageState extends State<DownloadPage> {
                   ),
                 ),
               ),
-              title: Text(
+              title: TranslatedText(
                 record.bangumiName,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
@@ -158,7 +159,7 @@ class _DownloadPageState extends State<DownloadPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                TranslatedText(
                   episode.episodeName.isNotEmpty
                       ? episode.episodeName
                       : 'Ep ${episode.episodeNumber}',

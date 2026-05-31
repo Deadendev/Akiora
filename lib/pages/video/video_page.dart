@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:canvas_danmaku/models/danmaku_content_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/pages/player/player_controller.dart';
 import 'package:kazumi/pages/video/video_controller.dart';
 import 'package:kazumi/pages/history/history_controller.dart';
@@ -905,7 +906,7 @@ class _VideoPageState extends State<VideoPage>
         children: [
           const Text(' Collection '),
           Expanded(
-            child: Text(
+            child: TranslatedText(
               videoPageController.title,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
@@ -1075,7 +1076,7 @@ class _VideoPageState extends State<VideoPage>
                                 const SizedBox(width: 6)
                               ],
                               Expanded(
-                                  child: Text(
+                                  child: TranslatedText(
                                 road.identifier[count0 - 1],
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,

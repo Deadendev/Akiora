@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/modules/comments/comment_item.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:skeletonizer/skeletonizer.dart';
@@ -110,7 +111,7 @@ class CommentsCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 8),
-            Text(commentItem!.comment.comment),
+            TranslatedText(commentItem!.comment.comment),
           ],
         ),
       ),

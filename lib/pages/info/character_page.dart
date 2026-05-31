@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/modules/character/character_full_item.dart';
 import 'package:kazumi/modules/comments/comment_item.dart';
 import 'package:kazumi/request/apis/bangumi_api.dart';
@@ -153,7 +154,7 @@ class _CharacterPageState extends State<CharacterPage> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text(
+                                        TranslatedText(
                                           characterFullItem.name,
                                           style: Theme.of(context)
                                               .textTheme
@@ -170,7 +171,7 @@ class _CharacterPageState extends State<CharacterPage> {
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 4.0, bottom: 12.0),
-                                          child: Text(
+                                          child: TranslatedText(
                                             characterFullItem.nameCN,
                                             style: Theme.of(context)
                                                 .textTheme
@@ -194,7 +195,7 @@ class _CharacterPageState extends State<CharacterPage> {
                                                 ),
                                           ),
                                         ),
-                                        Text(
+                                        TranslatedText(
                                           characterFullItem.info,
                                           style: Theme.of(context)
                                               .textTheme
@@ -215,7 +216,7 @@ class _CharacterPageState extends State<CharacterPage> {
                                                 ),
                                           ),
                                         ),
-                                        Text(
+                                        TranslatedText(
                                           characterFullItem.summary,
                                           style: Theme.of(context)
                                               .textTheme

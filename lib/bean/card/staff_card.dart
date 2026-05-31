@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/modules/staff/staff_item.dart';
 
 class StaffCard extends StatelessWidget {
@@ -17,15 +18,15 @@ class StaffCard extends StatelessWidget {
             ? NetworkImage('https://bangumi.tv/img/info_only.png')
             : NetworkImage(staffFullItem.staff.images!.grid),
       ),
-      title: Text(
+      title: TranslatedText(
         staffFullItem.staff.name,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
       ),
       subtitle: staffFullItem.staff.nameCN.isNotEmpty
-          ? Text(staffFullItem.staff.nameCN)
+          ? TranslatedText(staffFullItem.staff.nameCN)
           : null,
-      trailing: Text(staffFullItem.positions.isNotEmpty
+      trailing: TranslatedText(staffFullItem.positions.isNotEmpty
           ? (staffFullItem.positions[0].type.cn)
           : ''),
     );

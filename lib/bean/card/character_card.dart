@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/modules/characters/character_item.dart';
 import 'package:kazumi/pages/info/character_page.dart';
 import 'package:kazumi/utils/device.dart';
@@ -19,15 +20,15 @@ class CharacterCard extends StatelessWidget {
             ? NetworkImage('https://bangumi.tv/img/info_only.png')
             : NetworkImage(characterItem.avator.grid),
       ),
-      title: Text(
+      title: TranslatedText(
         characterItem.name,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
       ),
       subtitle: characterItem.actorList.isNotEmpty
-          ? Text(characterItem.actorList[0].name)
+          ? TranslatedText(characterItem.actorList[0].name)
           : null,
-      trailing: Text(characterItem.relation),
+      trailing: TranslatedText(characterItem.relation),
       onTap: () {
         showModalBottomSheet(
             isScrollControlled: true,

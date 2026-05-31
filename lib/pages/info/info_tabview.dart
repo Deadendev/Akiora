@@ -12,6 +12,7 @@ import 'package:kazumi/modules/characters/character_item.dart';
 import 'package:kazumi/modules/staff/staff_item.dart';
 import 'package:kazumi/utils/device.dart';
 import 'package:kazumi/services/translation/translation_service.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 
 class InfoTabView extends StatefulWidget {
   const InfoTabView({
@@ -192,7 +193,7 @@ class _InfoTabViewState extends State<InfoTabView>
                     label: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text('${widget.bangumiItem.tags[index].name} '),
+                        TranslatedText('${widget.bangumiItem.tags[index].name} '),
                         Text(
                           '${widget.bangumiItem.tags[index].count}',
                           style: TextStyle(

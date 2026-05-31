@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:kazumi/bean/widget/translated_text.dart';
 import 'package:kazumi/pages/info/info_controller.dart';
 import 'package:kazumi/services/logging/logger.dart';
 import 'package:kazumi/bean/dialog/dialog_helper.dart';
@@ -591,7 +592,7 @@ class _SourceSheetState extends State<SourceSheet>
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.all(20),
-                                  child: Text(searchItem.name),
+                                  child: TranslatedText(searchItem.name),
                                 ),
                               ),
                             ),
@@ -814,7 +815,7 @@ class _AliasDialogState extends State<_AliasDialog> {
                 final index = entry.key;
                 final alias = entry.value;
                 return ListTile(
-                  title: Text(alias),
+                  title: TranslatedText(alias),
                   trailing: IconButton(
                     onPressed: () {
                       KazumiDialog.show(
